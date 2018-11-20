@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SpeedRun</string>
+    <string name="show_no_results">Oops! Something went wrong :(</string>
+    <string name="menu_video_item">Open video</string>
+
+    <string name="item_game_player_name">Player name: %1$s</string>
+    <string name="item_game_time">Time: %1$d</string>
+    <string name="item_game_name">Game name: %1$s</string>
 </resources>

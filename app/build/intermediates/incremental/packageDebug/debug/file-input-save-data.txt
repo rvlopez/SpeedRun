@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Tue Nov 20 09:34:08 CET 2018
-0.baseType=DIRECTORY
-0.base=/Users/necsia/Documents/SpeedRun/app/build/intermediates/transforms/dexMerger/debug/0
-0.path=classes.dex
-0.set=DEX
-count=1

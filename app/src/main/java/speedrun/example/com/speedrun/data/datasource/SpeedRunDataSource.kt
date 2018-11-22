@@ -7,7 +7,7 @@ import speedrun.example.com.speedrun.entity.RunsListEntity
 import speedrun.example.com.speedrun.entity.SpeedRunEntity
 import javax.inject.Inject
 
-class SpeedRunDataSource @Inject constructor(
+open class SpeedRunDataSource @Inject constructor(
         private val speedRunApi: SpeedRunApi,
         private val speedRunDtoMapper: SpeedRunDtoMapper,
         private val runsDtoMapper: RunsDtoMapper) {

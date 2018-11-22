@@ -36,5 +36,9 @@ ext {
     daggerVersion = '2.11'
     glideVersion = '4.6.1'
 
+    mockitoVersion = '1.9.5'
+    robolectricVersion = '3.5.1'
+    robolectricVersionShadows = '3.3.2'
+    daggerMockVersion = '0.8.2'
 
 }

@@ -62,5 +62,7 @@ dependencies {
     testImplementation "org.mockito:mockito-core:${mockitoVersion}"
     testImplementation "org.robolectric:robolectric:${robolectricVersion}"
     testImplementation "org.robolectric:shadows-support-v4:${robolectricVersionShadows}"
+    testImplementation "com.github.fabioCollini.daggermock:daggermock-kotlin:${daggerMockVersion}"
+    androidTestImplementation "com.github.fabioCollini.daggermock:daggermock-kotlin:${daggerMockVersion}"
 
 }

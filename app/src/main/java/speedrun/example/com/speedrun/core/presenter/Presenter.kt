@@ -1,6 +1,8 @@
 package speedrun.example.com.speedrun.core.presenter
 
-abstract class Presenter<V> {
+import speedrun.example.com.speedrun.core.view.IView
+
+abstract class Presenter<V: IView> {
 
     var localView: V? = null
 
@@ -12,7 +14,7 @@ abstract class Presenter<V> {
         initialize()
     }
 
-    protected abstract fun initialize()
+    abstract fun initialize()
 
     abstract fun stop()
 

@@ -135,7 +135,7 @@ obj/
 .idea/uiDesigner.xml
 .idea/runConfigurations.xml
 .idea/codeStyles
-.idea/modules.xml
+.idea/dictionaries
 
 # OS-specific files
 .DS_Store

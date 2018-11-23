@@ -59,7 +59,7 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
     override fun showRuns(runsListEntity: RunsListEntity) {
         val item = getItem()
         this.runsListEntity = runsListEntity
-        Glide.with(this).load(item.assets.coverTiny.uri).into(gameLogo)
+        Glide.with(this).load(item.assets.coverLarge.uri).into(gameLogo)
         playerName.text = String.format(getString(R.string.item_game_player_name),
                 runsListEntity.data[FIRST].game)
         runTime.text = String.format(getString(R.string.item_game_time),

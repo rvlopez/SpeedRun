@@ -7,11 +7,7 @@ import speedrun.example.com.speedrun.app.di.module.ApplicationModule
 
 class SpeedRunApplication : Application() {
 
-    val component: ApplicationComponent by lazy {
-        DaggerApplicationComponent.builder()
-                .applicationModule(ApplicationModule(this))
-                .build()
-    }
+    lateinit var component: ApplicationComponent
 
     override fun onCreate() {
         super.onCreate()
@@ -19,6 +15,8 @@ class SpeedRunApplication : Application() {
     }
 
     private fun initializeInjector() {
+        component = DaggerApplicationComponent.builder()
+                .applicationModule(ApplicationModule(this)).build()
         component.inject(this)
     }
 }

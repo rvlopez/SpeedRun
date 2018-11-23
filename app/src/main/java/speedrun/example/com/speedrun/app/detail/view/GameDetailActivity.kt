@@ -83,6 +83,11 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.next_activity_out, R.anim.current_activity_in)
+    }
+
     private fun openVideoExternal() {
         val uri = runsListEntity.data[0].videos.links[0].uri
         if (uri!!.isNotEmpty())

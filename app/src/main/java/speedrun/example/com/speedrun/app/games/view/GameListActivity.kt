@@ -82,6 +82,7 @@ class GameListActivity : RootActivity(), GamesView, GameItemSelectedListener {
 
     override fun onGameItemSelected(speedRunGameItem: SpeedRunGameEntity) {
         startActivity(GameDetailActivity.getCallingIntent(this, speedRunGameItem))
+        overridePendingTransition(R.anim.next_activity_in, R.anim.current_activity_out)
     }
 
 }

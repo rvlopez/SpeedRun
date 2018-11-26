@@ -1,5 +1,5 @@
 package speedrun.example.com.speedrun.entity
 
 class VideosEntity(
-        val links: MutableList<LinksEntity>
+        val links: List<LinksEntity>
 )

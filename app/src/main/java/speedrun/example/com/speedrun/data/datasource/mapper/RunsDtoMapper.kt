@@ -10,7 +10,7 @@ class RunsDtoMapper @Inject constructor() {
         return RunsListEntity(toRunsEntity(runsListDto.data))
     }
 
-    private fun toRunsEntity(runsListDto: MutableList<RunsDto>): MutableList<RunsEntity> {
+    private fun toRunsEntity(runsListDto: List<RunsDto>): List<RunsEntity> {
 
         val runsEntityList: MutableList<RunsEntity> = mutableListOf()
 
@@ -31,7 +31,7 @@ class RunsDtoMapper @Inject constructor() {
 
     }
 
-    private fun toPlayersEntity(playersDto: MutableList<PlayersDto>): MutableList<PlayersEntity> {
+    private fun toPlayersEntity(playersDto: List<PlayersDto>): List<PlayersEntity> {
 
         val playersEntityList: MutableList<PlayersEntity> = mutableListOf()
 
@@ -46,7 +46,7 @@ class RunsDtoMapper @Inject constructor() {
         return TimesEntity(timesDto.primary, timesDto.primary_t, timesDto.realTime)
     }
 
-    private fun toLinksEntity(linksDto: MutableList<LinksDto>): MutableList<LinksEntity> {
+    private fun toLinksEntity(linksDto: List<LinksDto>): List<LinksEntity> {
 
         val linksEntityList: MutableList<LinksEntity> = mutableListOf()
 

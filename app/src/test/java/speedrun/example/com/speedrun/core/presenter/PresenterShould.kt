@@ -8,8 +8,8 @@ import speedrun.example.com.speedrun.app.games.view.GamesView
 
 class PresenterShould {
 
-    lateinit var view: GamesView
-    lateinit var presenter: Presenter<GamesView>
+    private lateinit var view: GamesView
+    private lateinit var presenter: Presenter<GamesView>
 
     private inline fun <reified T: Any> mock() = mock(T::class.java, Mockito.CALLS_REAL_METHODS)
 
@@ -35,7 +35,6 @@ class PresenterShould {
     }
 
     @Test fun start_correctly_with_valid_presenter() {
-        val presenter: Presenter<GamesView>
 
     }
 }

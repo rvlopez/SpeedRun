@@ -5,7 +5,7 @@ import speedrun.example.com.speedrun.entity.SpeedRunGameEntity
 
 interface GamesView : IView {
 
-    fun showGames(speedRunEntityListSpeedRun: MutableList<SpeedRunGameEntity>)
+    fun showGames(speedRunEntityList: List<SpeedRunGameEntity>)
 
     fun showNoResults()
 

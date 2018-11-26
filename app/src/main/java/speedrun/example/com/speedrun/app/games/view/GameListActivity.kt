@@ -22,6 +22,7 @@ import javax.inject.Inject
 class GameListActivity : RootActivity(), GamesView, GameItemSelectedListener {
 
     @Inject lateinit var gamesPresenter: Presenter<GamesView>
+    private lateinit var gamesAdapter: GamesAdapter
 
     private val Activity.app: SpeedRunApplication get() = application as SpeedRunApplication
     private val component by lazy { app.component.plus(GamesModule()) }
@@ -39,6 +40,7 @@ class GameListActivity : RootActivity(), GamesView, GameItemSelectedListener {
             adapter = GamesAdapter(this@GameListActivity)
             layoutManager = LinearLayoutManager(this@GameListActivity)
         }
+        gamesAdapter = recyclerView.adapter as GamesAdapter
     }
 
     override fun onDestroy() {
@@ -47,11 +49,10 @@ class GameListActivity : RootActivity(), GamesView, GameItemSelectedListener {
         gamesPresenter.stop()
     }
 
-    override fun showGames(speedRunEntityListSpeedRun: MutableList<SpeedRunGameEntity>) {
+    override fun showGames(speedRunEntityList: List<SpeedRunGameEntity>) {
         recyclerView.show()
         noResultsView.hide()
-        val gamesAdapter = recyclerView.adapter as? GamesAdapter
-        gamesAdapter?.setItems(speedRunEntityListSpeedRun)
+        gamesAdapter.setItems(speedRunEntityList)
 
     }
 

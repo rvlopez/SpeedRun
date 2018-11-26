@@ -32,7 +32,7 @@ class InteractorShould {
     }
 
     @Test fun interactor_unsubscribe_correctly() {
-        //interactor.execute()
+        interactor.execute(onNext = {}, onError = {}, onComplete = {})
         interactor.unsubscribe()
 
         assertTrue(testObserver.isDisposed)

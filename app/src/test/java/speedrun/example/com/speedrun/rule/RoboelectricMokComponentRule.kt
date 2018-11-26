@@ -1,8 +1,6 @@
 package speedrun.example.com.speedrun.rule
 
 import it.cosenonjaviste.daggermock.DaggerMock
-import it.cosenonjaviste.daggermock.DaggerMockRule
-import org.robolectric.RuntimeEnvironment
 import speedrun.example.com.speedrun.SpeedRunApplication
 import speedrun.example.com.speedrun.app.di.component.ApplicationComponent
 import speedrun.example.com.speedrun.app.di.module.ApplicationModule
@@ -15,6 +13,6 @@ class RoboelectricMokComponentRule {
     }
 
     private val app : SpeedRunApplication get()
-            = RuntimeEnvironment.application as SpeedRunApplication
+            = SpeedRunApplication()
 
 }

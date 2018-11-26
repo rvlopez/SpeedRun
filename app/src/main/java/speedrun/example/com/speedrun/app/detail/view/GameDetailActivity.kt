@@ -50,7 +50,8 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
         getRuns()
     }
 
-    private fun getItem(): SpeedRunGameEntity = intent.getSerializableExtra(ARG_ITEM) as SpeedRunGameEntity
+    private fun getItem(): SpeedRunGameEntity
+            = intent.getSerializableExtra(ARG_ITEM) as SpeedRunGameEntity
 
     private fun getRuns() {
         gamesDetailPresenter.start(getItem().id)
@@ -90,8 +91,9 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
 
     private fun openVideoExternal() {
         val uri = runsListEntity.data[0].videos.links[0].uri
-        if (uri!!.isNotEmpty())
-        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+        if (uri!!.isNotEmpty()) {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+        }
     }
 
     override fun showNoResults() {

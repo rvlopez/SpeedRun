@@ -4,6 +4,6 @@ data class RunsEntity(
         val id: String,
         val game: String,
         val videos: VideosEntity,
-        val players: MutableList<PlayersEntity>,
+        val players: List<PlayersEntity>,
         val times: TimesEntity
 )

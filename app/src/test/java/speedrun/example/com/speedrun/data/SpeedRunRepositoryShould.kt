@@ -31,7 +31,7 @@ class SpeedRunRepositoryShould {
     }
 
     @Test fun get_service_correctly() {
-        val speedRunEntity = SpeedRunEntity(mutableListOf())
+        val speedRunEntity = SpeedRunEntity(listOf())
 
         `when`(speedRunDataSource.getGames()).thenReturn(Observable.just(speedRunEntity))
 

@@ -17,6 +17,6 @@ data class SpeedRunGamesDto(
         val romHack: Boolean,
         val created: String,
         val assets: AssetsDto,
-        val links: MutableList<LinksDto>
+        val links: List<LinksDto>
 
 )

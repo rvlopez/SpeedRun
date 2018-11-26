@@ -5,7 +5,7 @@ import speedrun.example.com.speedrun.app.games.view.GamesView
 import speedrun.example.com.speedrun.core.presenter.Presenter
 import javax.inject.Inject
 
-class GamesPresenter @Inject constructor(private val gamesUseCase: GamesUseCase)
+open class GamesPresenter @Inject constructor(private val gamesUseCase: GamesUseCase)
     : Presenter<GamesView>() {
 
     override fun initialize() {

@@ -10,7 +10,7 @@ class SpeedRunDtoMapper @Inject constructor() {
         return SpeedRunEntity(toGameEntity(speedRunListDto.data))
     }
 
-    private fun toGameEntity(speedRunGamesDto: MutableList<SpeedRunGamesDto>): MutableList<SpeedRunGameEntity> {
+    private fun toGameEntity(speedRunGamesDto: List<SpeedRunGamesDto>): List<SpeedRunGameEntity> {
 
         val speedRunGameEntityList: MutableList<SpeedRunGameEntity> = mutableListOf()
 
@@ -59,7 +59,7 @@ class SpeedRunDtoMapper @Inject constructor() {
                 toAssetsInfoEntity(assetsDto.foreground))
     }
 
-    private fun toLinkEntity(linksDto: MutableList<LinksDto>): MutableList<LinksEntity> {
+    private fun toLinkEntity(linksDto: List<LinksDto>): List<LinksEntity> {
 
         val linksEntityList: MutableList<LinksEntity> = mutableListOf()
 

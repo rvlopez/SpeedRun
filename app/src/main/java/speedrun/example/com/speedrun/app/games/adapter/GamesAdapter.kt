@@ -12,7 +12,7 @@ import speedrun.example.com.speedrun.entity.SpeedRunGameEntity
 class GamesAdapter(private val onItemClickListener: GameItemSelectedListener)
     : RecyclerView.Adapter<GamesAdapter.ViewHolder>() {
 
-    private var speedRunGames: MutableList<SpeedRunGameEntity> = mutableListOf()
+    private var speedRunGames: List<SpeedRunGameEntity> = listOf()
 
     override fun getItemCount() = speedRunGames.size
 
@@ -22,7 +22,7 @@ class GamesAdapter(private val onItemClickListener: GameItemSelectedListener)
     override fun onBindViewHolder(holder: ViewHolder, position: Int)
             = holder.bind(speedRunGames[position], onItemClickListener)
 
-    fun setItems(speedRunGames: MutableList<SpeedRunGameEntity>) {
+    fun setItems(speedRunGames: List<SpeedRunGameEntity>) {
         this.speedRunGames = speedRunGames
         notifyDataSetChanged()
     }

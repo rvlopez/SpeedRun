@@ -9,7 +9,7 @@ import speedrun.example.com.speedrun.app.games.di.component.GamesComponent
 import speedrun.example.com.speedrun.app.games.di.module.GamesModule
 import javax.inject.Singleton
 
-@Singleton @Component(modules = arrayOf(ApplicationModule::class))
+@Singleton @Component(modules = [(ApplicationModule::class)])
 interface ApplicationComponent {
 
     fun inject(application: SpeedRunApplication)

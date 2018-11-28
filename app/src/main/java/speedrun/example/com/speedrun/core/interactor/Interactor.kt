@@ -17,7 +17,7 @@ abstract class Interactor<T> {
                 .subscribe(onNext, onError, onComplete)
     }
 
-    protected abstract fun buildObservable() : Observable<T>
+    abstract fun buildObservable() : Observable<T>
 
     fun unsubscribe() {
         if (!disposable.isDisposed) {

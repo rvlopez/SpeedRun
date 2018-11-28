@@ -13,5 +13,5 @@ data class SpeedRunGameEntity(
         val romHack: Boolean,
         val created: String,
         val assets: AssetsEntity,
-        val links: MutableList<LinksEntity>
+        val links: List<LinksEntity>
 ) : Serializable

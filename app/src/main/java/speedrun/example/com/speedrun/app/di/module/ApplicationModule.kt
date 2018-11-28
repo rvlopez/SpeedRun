@@ -6,8 +6,8 @@ import javax.inject.Singleton
 import speedrun.example.com.speedrun.SpeedRunApplication
 
 @Module
-class ApplicationModule(private val application: SpeedRunApplication) {
+open class ApplicationModule(private val application: SpeedRunApplication) {
 
     @Provides @Singleton
-    fun provideApplication() = this.application
+    open fun provideApplication() = this.application
 }

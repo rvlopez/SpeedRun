@@ -19,6 +19,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -28,6 +29,7 @@ task clean(type: Delete) {
 
 ext {
 
+    // Dependencies
     appCompat = '26.1.0'
     retrofitVersion = '2.3.0'
     okHttpVersion = '3.6.0'
@@ -36,5 +38,13 @@ ext {
     daggerVersion = '2.11'
     glideVersion = '4.6.1'
 
+    // Test dependencies
+    junitVersion = '4.12'
+    mockitoVersion = '1.9.5'
+    espressoVersion = '3.0.2'
+    robolectricVersion = '3.5.1'
+    robolectricVersionShadows = '3.3.2'
+    daggerMockVersion = '0.8.4'
+    testRunnerVersion = '1.0.2'
 
 }

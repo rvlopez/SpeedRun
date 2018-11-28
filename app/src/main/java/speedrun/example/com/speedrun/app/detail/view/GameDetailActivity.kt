@@ -50,7 +50,8 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
         getRuns()
     }
 
-    private fun getItem(): SpeedRunGameEntity = intent.getSerializableExtra(ARG_ITEM) as SpeedRunGameEntity
+    private fun getItem(): SpeedRunGameEntity
+            = intent.getSerializableExtra(ARG_ITEM) as SpeedRunGameEntity
 
     private fun getRuns() {
         gamesDetailPresenter.start(getItem().id)
@@ -59,7 +60,7 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
     override fun showRuns(runsListEntity: RunsListEntity) {
         val item = getItem()
         this.runsListEntity = runsListEntity
-        Glide.with(this).load(item.assets.coverTiny.uri).into(gameLogo)
+        Glide.with(this).load(item.assets.coverLarge.uri).into(gameLogo)
         playerName.text = String.format(getString(R.string.item_game_player_name),
                 runsListEntity.data[FIRST].game)
         runTime.text = String.format(getString(R.string.item_game_time),
@@ -83,10 +84,16 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.next_activity_out, R.anim.current_activity_in)
+    }
+
     private fun openVideoExternal() {
         val uri = runsListEntity.data[0].videos.links[0].uri
-        if (uri!!.isNotEmpty())
-        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+        if (uri!!.isNotEmpty()) {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+        }
     }
 
     override fun showNoResults() {

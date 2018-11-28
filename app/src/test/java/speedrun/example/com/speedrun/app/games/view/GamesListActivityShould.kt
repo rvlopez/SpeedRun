@@ -24,6 +24,7 @@ class GamesListActivityShould {
     @Test
     fun set_view_to_presenter() {
 
+        gameListActivity = Robolectric.setupActivity(GameListActivity::class.java)
         mockPresenter = mock(GamesPresenter::class.java)
 
         verify(mockPresenter).localView = Matchers.eq(gameListActivity)

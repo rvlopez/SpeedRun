@@ -5,9 +5,9 @@ import speedrun.example.com.speedrun.SpeedRunApplication
 import speedrun.example.com.speedrun.app.di.component.ApplicationComponent
 import speedrun.example.com.speedrun.app.di.module.ApplicationModule
 
-class RoboelectricMokComponentRule {
+class RobolectricMokComponentRule {
 
-    fun setRoboelectricMockComponentRule()
+    fun setRobolectricMockComponentRule()
             = DaggerMock.rule<ApplicationComponent>(ApplicationModule(SpeedRunApplication())) {
         set { component -> app.component = component }
     }

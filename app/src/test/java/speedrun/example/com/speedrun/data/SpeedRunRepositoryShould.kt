@@ -10,12 +10,12 @@ import org.mockito.Mockito.`when`
 import speedrun.example.com.speedrun.data.datasource.SpeedRunDataSource
 import speedrun.example.com.speedrun.data.repository.SpeedRunRepository
 import speedrun.example.com.speedrun.entity.SpeedRunEntity
-import speedrun.example.com.speedrun.rule.RoboelectricMokComponentRule
+import speedrun.example.com.speedrun.rule.RobolectricMokComponentRule
 
 class SpeedRunRepositoryShould {
 
-    @Rule @JvmField var roboelectricMokComponentRule
-            = RoboelectricMokComponentRule().setRoboelectricMockComponentRule()
+    @Rule @JvmField var robolectricMokComponentRule
+            = RobolectricMokComponentRule().setRobolectricMockComponentRule()
 
     private lateinit var speedRunDataSource: SpeedRunDataSource
     private lateinit var speedRunRepository: SpeedRunRepository

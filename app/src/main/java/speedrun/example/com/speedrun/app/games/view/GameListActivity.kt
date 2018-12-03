@@ -2,12 +2,8 @@ package speedrun.example.com.speedrun.app.games.view
 
 import android.app.Activity
 import android.os.Bundle
-import android.support.v4.app.ActivityOptionsCompat
-import android.support.v4.view.ViewCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_game_list.*
-import kotlinx.android.synthetic.main.games_item.*
 import kotlinx.android.synthetic.main.progress_bar.*
 import kotlinx.android.synthetic.main.show_no_results_layout.*
 import speedrun.example.com.speedrun.R

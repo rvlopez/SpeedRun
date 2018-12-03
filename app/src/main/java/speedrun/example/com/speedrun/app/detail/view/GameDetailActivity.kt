@@ -17,6 +17,7 @@ import speedrun.example.com.speedrun.SpeedRunApplication
 import speedrun.example.com.speedrun.app.detail.di.module.GamesDetailModule
 import speedrun.example.com.speedrun.app.detail.presenter.GamesDetailPresenter
 import speedrun.example.com.speedrun.core.extensions.hide
+import speedrun.example.com.speedrun.core.extensions.load
 import speedrun.example.com.speedrun.core.extensions.show
 import speedrun.example.com.speedrun.core.view.RootActivity
 import speedrun.example.com.speedrun.entity.SpeedRunGameEntity
@@ -50,6 +51,11 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
         getRuns()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        gamesDetailPresenter.stop()
+    }
+
     private fun getItem(): SpeedRunGameEntity
             = intent.getSerializableExtra(ARG_ITEM) as SpeedRunGameEntity
 
@@ -60,7 +66,8 @@ class GameDetailActivity : RootActivity(), GamesDetailView {
     override fun showRuns(runsListEntity: RunsListEntity) {
         val item = getItem()
         this.runsListEntity = runsListEntity
-        Glide.with(this).load(item.assets.coverLarge.uri).into(gameLogo)
+
+        gameLogo.load(item.assets.coverLarge.uri!!)
         playerName.text = String.format(getString(R.string.item_game_player_name),
                 runsListEntity.data[FIRST].game)
         runTime.text = String.format(getString(R.string.item_game_time),
